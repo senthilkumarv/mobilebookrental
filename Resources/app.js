@@ -1,64 +1,26 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
+Ti.include('namespaces.js')
+Ti.include('models.js')
+Ti.include('dataadapter.js')
+Ti.include('books.js')
+Ti.include('locate.js')
+
 Titanium.UI.setBackgroundColor('#000');
 
-// create tab group
 var tabGroup = Titanium.UI.createTabGroup();
 
-
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
+var booksTab = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
+    title:'Books',
+    window:booksWindow
 });
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
-});
-
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
+var locateTab = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+    title:'Locate Us',
+    window:locateWindow
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
-});
+tabGroup.addTab(booksTab);  
+tabGroup.addTab(locateTab);  
 
-win2.add(label2);
-
-
-
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
-
-
-// open tab group
 tabGroup.open();
