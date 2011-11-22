@@ -6,12 +6,11 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.018953 seconds on emulator to get ready
+[DEBUG] waited 0.055451 seconds on emulator to get ready
 [DEBUG] com.wings.mobilebookrental installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: /Users/senthilkumarv/Documents/Titanium Studio Workspace/mobilebookrental/Resources/books.js => /Users/senthilkumarv/Documents/Titanium Studio Workspace/mobilebookrental/build/android/bin/assets/Resources/books.js
-[TRACE] COPYING MODIFIED FILE: /Users/senthilkumarv/Documents/Titanium Studio Workspace/mobilebookrental/Resources/fixtures.js => /Users/senthilkumarv/Documents/Titanium Studio Workspace/mobilebookrental/build/android/bin/assets/Resources/fixtures.js
+[TRACE] COPYING MODIFIED FILE: /Users/senthilkumarv/Documents/Titanium Studio Workspace/mobilebookrental/Resources/bookdetailrow.js => /Users/senthilkumarv/Documents/Titanium Studio Workspace/mobilebookrental/build/android/bin/assets/Resources/bookdetailrow.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [DEBUG] found drawable-long-land-hdpi splash screen at /Users/senthilkumarv/Documents/Titanium Studio Workspace/mobilebookrental/Resources/android/images/res-long-land-hdpi/default.png

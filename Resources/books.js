@@ -3,23 +3,20 @@ var searchBar = Titanium.UI.createSearchBar({
     top:0,
 });
 
-var dataForBookListTable = function() {
-	Ti.API.debug('inside book list');
-	var books = TW.DataAdapter.getBookList();
-	var bookData = [];
-	for(var i=0;i<books.length;i++) {
-		var book = books[i];
-		Ti.API.debug(book.title);
-		bookData.push({title: book.title});
-	}
-	return bookData;
-};
 
 var bookList = Titanium.UI.createTableView({
-	data: dataForBookListTable(),
 	search: searchBar
 });
 
+var loadBookList = function() {
+	var books = TW.DataAdapter.getBookList();
+	for(var i=0;i<books.length;i++) {
+		var row = TW.UI.createBookDetailRow(books[i]);
+		bookList.appendRow(row);
+	}
+};
+
+loadBookList();
 
 var booksWindow = Titanium.UI.createWindow({  
     title:'Books',
