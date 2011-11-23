@@ -1,3 +1,5 @@
+TW.Model.Books = {}
+
 TW.Model.Book = function() {
 	this.bookId = '';
 	this.title = '';

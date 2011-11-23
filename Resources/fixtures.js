@@ -10,3 +10,16 @@ TW.Fixtures.books = [
 	{bookId: '9', isbn: '9380200125', posterUrl: 'images/9.png', title: 'Romancing the Balance Sheet', author: 'Dr. Anil Lamba', publisher: 'TV18', description: 'Romancing the Balance Sheet by Dr. Anil Lamba is a surprisingly interesting endeavor, seeking to de-mystify the concept of finance management and to get us all involved a little more profitably in our own lives.'},
 	{bookId: '10', isbn: '9781567314052', posterUrl: 'images/10.png', title: 'Five Equations That Changed the World: The Power and Poetry of Mathematics', author: 'Michael Guillen', publisher: 'Harper & Row', description: 'Five Equations That Changed the World: The Power and Poetry of Mathematics is a book written by Michael Guillen in 1995. It is divided into five chapters that talk about five different equations in physics and the people who have developed them'}
 ];
+
+TW.Fixtures.recommendedBooks = [ 
+	{bookId: '1', recommendedBookId : ['2']},
+	{bookId: '2', recommendedBookId : ['1', '3']},
+	{bookId: '3', recommendedBookId : []},
+	{bookId: '4', recommendedBookId : ['5', '2', '1']},
+	{bookId: '5', recommendedBookId : ['8', '5']},
+	{bookId: '6', recommendedBookId : ['7', '6']},
+	{bookId: '7', recommendedBookId : ['9']},
+	{bookId: '8', recommendedBookId : ['7']},
+	{bookId: '9', recommendedBookId : ['10']},
+	{bookId: '10', recommendedBookId : ['3', '9']}
+];

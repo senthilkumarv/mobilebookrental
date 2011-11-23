@@ -10,7 +10,7 @@ var bookList = Titanium.UI.createTableView({
 });
 
 var loadBookList = function() {
-	var books = TW.DataAdapter.getBookList();
+	var books = TW.Store.Books.findAll();
 	for(var i=0;i<books.length;i++) {
 		var row = TW.UI.createBookDetailRow({
 			data: books[i]

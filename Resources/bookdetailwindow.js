@@ -61,10 +61,19 @@ TW.UI.createBookDetailWindow = function (params) {
 		textAlign: 'both'
 	});
 	
-	var recommendationView = TW.UI.createRecommendationView({
- 		
+	/*var recommendationView = TW.UI.createRecommendationView({
+ 		backgroundColor: '#000',
+ 		left: 10,
+ 		right: 10,
+ 		an
 	});
+	*/
 	
+	var recommendationView = TW.UI.createRecommendationView({
+		data: TW.Store.Books.findRecommendedBooks(data.bookId),
+		imageHeight: 130,
+		imageWidth: 75
+	});
 	bookDetailWindow.add(poster);
 	bookDetailWindow.add(title);
 	bookDetailWindow.add(author);

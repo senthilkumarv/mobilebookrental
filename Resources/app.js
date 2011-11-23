@@ -1,4 +1,5 @@
 Ti.include('namespaces.js')
+Ti.include('store.js')
 Ti.include('models.js')
 Ti.include('dataadapter.js')
 Ti.include('bookdetailrow.js')
