@@ -31,3 +31,9 @@ TW.Fixtures.allLocations = [
 	{id: '4', name: 'Just Books Brookefield', latitude: '12.9559864', longitude: '77.721662'},
 	{id: '5', name: 'Just Books Try', latitude: '12.838383', longitude: '77.737373'}
 ];
+
+TW.Fixtures.availabiltyDetails = [
+ {locationId: 1, availableCopies: 1},
+ {locationId: 2, availableCopies: 3},
+ {locationId: 5, availableCopies: 7},
+];

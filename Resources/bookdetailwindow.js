@@ -72,9 +72,31 @@ TW.UI.createBookDetailWindow = function (params) {
 		height: 50
 	});
 	
+	var locateBookAvailability = Ti.UI.createButton({
+		title: 'View Availability',
+		top: 355,
+		left: 10,
+		right: 10
+	});
+	
+	var showAvailability = function() {
+		var params ={};
+		params.data = TW.Fixtures.availabiltyDetails;
+		var mapView = TW.UI.createAnnotatedMapView(params);
+		var mapWindow = Ti.UI.createWindow({
+			title: 'Locations'
+		});
+		mapWindow.add(mapView);
+		booksTab.open(mapWindow);
+	};
+	
+	locateBookAvailability.addEventListener('click', showAvailability);
+	
 	var bookDetailView = Ti.UI.createView({
 	    height: 400
 	});
+	
+	bookDetailView.add(locateBookAvailability);
 	bookDetailView.add(recommendationLabel);
 	bookDetailView.add(poster);
 	bookDetailView.add(title);
