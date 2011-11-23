@@ -23,3 +23,11 @@ TW.Fixtures.recommendedBooks = [
 	{bookId: '9', recommendedBookId : ['10']},
 	{bookId: '10', recommendedBookId : ['3', '9']}
 ];
+
+TW.Fixtures.allLocations = [
+	{id: '1', name: 'Just Books J P Nagar', latitude: '12.9016672', longitude: '77.58250149999999'},
+	{id: '2', name: 'Just Books Indira Nagar', latitude: '12.9268435', longitude: '77.6697939'},
+	{id: '3', name: 'Just Books Bilekahalli', latitude: '12.8973484', longitude: '77.61065119999999'},
+	{id: '4', name: 'Just Books Brookefield', latitude: '12.9559864', longitude: '77.721662'},
+	{id: '5', name: 'Just Books Try', latitude: '12.838383', longitude: '77.737373'}
+];
