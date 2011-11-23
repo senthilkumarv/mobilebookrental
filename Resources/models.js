@@ -1,4 +1,5 @@
 TW.Model.Books = {}
+TW.Model.Locations = {}
 
 TW.Model.Book = function() {
 	this.bookId = '';
@@ -13,3 +14,11 @@ TW.Model.Book = function() {
 		img.src = (posterUrl == null || posterUrl == undefined)?'default_poster.png':posterUrl;
 	}
 };
+
+
+TW.Model.Location = function() {
+	this.latitude = '';
+	this.longitude = '';
+	this.name = '';
+	this.locationId ='';
+}

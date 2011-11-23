@@ -6,3 +6,4 @@ TW.Model = {};
 TW.Fixtures = {};
 TW.Store = {};
 TW.Store.Books = {};
+TW.Store.Locations = {};
