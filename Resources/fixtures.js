@@ -10,3 +10,11 @@ TW.Fixtures.books = [
 	{bookId: '9', isbn: '9380200125', posterUrl: 'images/9.png', title: 'Romancing the Balance Sheet', author: 'Dr. Anil Lamba', publisher: 'TV18', description: 'Romancing the Balance Sheet by Dr. Anil Lamba is a surprisingly interesting endeavor, seeking to de-mystify the concept of finance management and to get us all involved a little more profitably in our own lives.'},
 	{bookId: '10', isbn: '9781567314052', posterUrl: 'images/10.png', title: 'Five Equations That Changed the World: The Power and Poetry of Mathematics', author: 'Michael Guillen', publisher: 'Harper & Row', description: 'Five Equations That Changed the World: The Power and Poetry of Mathematics is a book written by Michael Guillen in 1995. It is divided into five chapters that talk about five different equations in physics and the people who have developed them'}
 ];
+
+TW.Fixtures.allLocations = [
+{id: '1', name: 'Just Books J P Nagar', latitude: '12.9016672', longitude: '77.58250149999999'},
+{id: '2', name: 'Just Books Indira Nagar', latitude: '12.9268435', longitude: '77.6697939'},
+{id: '3', name: 'Just Books Bilekahalli', latitude: '12.8973484', longitude: '77.61065119999999'},
+{id: '4', name: 'Just Books Brookefield', latitude: '12.9559864', longitude: '77.721662'},
+{id: '5', name: 'Just Books Try', latitude: '12.838383', longitude: '77.737373'}
+];
