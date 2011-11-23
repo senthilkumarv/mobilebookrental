@@ -14,10 +14,10 @@ TW.Fixtures.books = [
 TW.Fixtures.recommendedBooks = [ 
 	{bookId: '1', recommendedBookId : ['2']},
 	{bookId: '2', recommendedBookId : ['1', '3']},
-	{bookId: '3', recommendedBookId : []},
+	{bookId: '3', recommendedBookId : ['1', '3']},
 	{bookId: '4', recommendedBookId : ['5', '2', '1']},
 	{bookId: '5', recommendedBookId : ['8', '5']},
-	{bookId: '6', recommendedBookId : ['7', '6']},
+	{bookId: '6', recommendedBookId : ['7', '8']},
 	{bookId: '7', recommendedBookId : ['9']},
 	{bookId: '8', recommendedBookId : ['7']},
 	{bookId: '9', recommendedBookId : ['10']},
@@ -30,4 +30,10 @@ TW.Fixtures.allLocations = [
 	{id: '3', name: 'Just Books Bilekahalli', latitude: '12.8973484', longitude: '77.61065119999999'},
 	{id: '4', name: 'Just Books Brookefield', latitude: '12.9559864', longitude: '77.721662'},
 	{id: '5', name: 'Just Books Try', latitude: '12.838383', longitude: '77.737373'}
+];
+
+TW.Fixtures.availabiltyDetails = [
+ {locationId: 1, availableCopies: 1},
+ {locationId: 2, availableCopies: 3},
+ {locationId: 5, availableCopies: 7},
 ];

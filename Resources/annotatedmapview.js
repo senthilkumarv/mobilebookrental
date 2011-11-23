@@ -22,10 +22,11 @@ TW.UI.createAnnotatedMapView = function(params) {
 		}
 		else {
 			var location = new TW.Model.Location();
+			var data = params.data;
 			for (var i=0; i<data.length; i++){
-				location = TW.Store.Locations.findLocationById(params[i].locationId);
+				location = TW.Store.Locations.findLocationById(data[i].locationId);
 				var annotation = createAnnotation(location);
-				if(params.availableCopies) {
+				if(data[i].availableCopies) {
 					annotation.subtitle = 'Available Copies: ' + data[i].availableCopies;
 				}
 				annotations.push(annotation);

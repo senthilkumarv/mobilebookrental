@@ -3,16 +3,16 @@ TW.UI.createBookDetailRowView = function(params) {
 	var bookTitle = Ti.UI.createLabel({
 		text: data.title,
 		textAlign: 'left',
-		top: 4,
+		top: 5,
   		left:35,
 		height: 20,
-		color:'#000',
+		color:'#000'
 	});
 	var author = Ti.UI.createLabel({
 		text: data.author,
 		textAlign: 'left',
 		left: 35,
-		bottom: 4,
+		bottom: 5,
 		color: '#666',
 		height: 20
 	});
