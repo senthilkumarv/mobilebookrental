@@ -1,4 +1,4 @@
-TW.UI.createBookDetailRow = function(params) {
+TW.UI.createBookDetailRowView = function(params) {
 	var data = params.data; 
 	var bookTitle = Ti.UI.createLabel({
 		text: data.title,
@@ -22,17 +22,36 @@ TW.UI.createBookDetailRow = function(params) {
 		left: 0,
 		top: 0,
 		height: 50,
-		width: 32
-	});
-	var row = Ti.UI.createTableViewRow({
-		height: '55',
-		data: data,
-		hasChild: true,
-		searchCriteria: data.title
+		width: 32,
+		backgroundColor: '#fff'
 	});
 	
-	row.add(poster)
-	row.add(bookTitle);
-	row.add(author);
+	var view = Ti.UI.createView();
+	
+	var init = function() {
+		view.add(poster);
+		view.add(bookTitle);
+		view.add(author);
+		if(params.height) view.height = params.height;
+		if(params.top) view.top = params.top;
+		if(params.borderColor) { view.borderColor = params.borderColor; view.borderWidth = 1;}
+		
+	}
+	init();
+	return view;
+}
+
+TW.UI.createBookDetailRow = function(params) {
+	var row = Ti.UI.createTableViewRow({
+		height: '55',
+		data: params.data,
+		hasChild: true,
+		searchCriteria: params.data.title
+	});
+	
+	var view = TW.UI.createBookDetailRowView(params);
+	
+	row.add(view);
+	
 	return row;
 }

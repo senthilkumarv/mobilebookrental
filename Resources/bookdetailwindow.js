@@ -1,9 +1,5 @@
 TW.UI.createBookDetailWindow = function (params) {
 	var data = params.data;
-	var bookDetailWindow = Ti.UI.createWindow({
-		title: 'Book Detail',
-		backgroundColor: '#dfdfdf'
-	});
 	
 	var poster = Ti.UI.createImageView({
 		top: 5,
@@ -56,34 +52,52 @@ TW.UI.createBookDetailWindow = function (params) {
 	
 	var description = Ti.UI.createLabel({
 		text: data.description,
-		height: 'auto',
+		height: 150,
 		top: 110,
 		left: 10,
 		right: 10,
 		color: '#000',
-		font: {fontSize: '14'},
-		textAlign: 'both'
+		font: {fontSize: '14'}
 	});
-	
-	/*var recommendationView = TW.UI.createRecommendationView({
- 		backgroundColor: '#000',
- 		left: 10,
- 		right: 10,
- 		an
+	var recommendationLabel = Ti.UI.createLabel({
+		text: 'Recommendation',
+		top: 270,
+		height: 15,
+		left: 10,
+		font: {fontSize: '14'}
 	});
-	*/
-	
 	var recommendationView = TW.UI.createRecommendationView({
 		data: TW.Store.Books.findRecommendedBooks(data.bookId),
-		imageHeight: 130,
-		imageWidth: 75
+		top: 295,
+		height: 50
 	});
-	bookDetailWindow.add(poster);
-	bookDetailWindow.add(title);
-	bookDetailWindow.add(author);
-	bookDetailWindow.add(isbn);
-	bookDetailWindow.add(publisher);
-	bookDetailWindow.add(description);
-	bookDetailWindow.add(recommendationView);
+	
+	var bookDetailView = Ti.UI.createView({
+	    height: 400
+	});
+	bookDetailView.add(recommendationLabel);
+	bookDetailView.add(poster);
+	bookDetailView.add(title);
+	bookDetailView.add(author);
+	bookDetailView.add(isbn);
+	bookDetailView.add(publisher);
+	bookDetailView.add(description);
+	bookDetailView.add(recommendationView);
+	
+	var detailsScrollView = Ti.UI.createScrollView({
+		contentHeight:'auto',
+		top:0,
+	    showVerticalScrollIndicator:true
+	})
+	
+	detailsScrollView.add(bookDetailView);
+	
+	var bookDetailWindow = Ti.UI.createWindow({
+		title: 'Book Detail',
+		backgroundColor: '#efefef'
+	});
+	
+	bookDetailWindow.add(detailsScrollView);
+	
 	return bookDetailWindow;
 };
