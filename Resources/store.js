@@ -32,3 +32,25 @@ TW.Store.Books.findRecommendedBooks = function(bookId) {
 	}
 	return recommendedBooks;
 }
+
+TW.Store.Locations.findAll = function() {
+	var data = TW.DataAdapter.getLocations();
+	var locations = new Array();
+	for (var i=0;i<data.length;i++) {
+		var location = new TW.Model.Location();
+		location.latitude = data[i].latitude;
+		location.longitude = data[i].longitude;
+		location.name = data[i].name;
+		location.locationId = data[i].id;
+		locations.push(location);
+	};
+	return locations;
+};
+
+TW.Store.Locations.findLocationById = function(locationid) {
+	var locations = TW.Store.Locations.findAll();
+	for(var i=0;i<locations.length;i++) {
+		if(locations[i].locationId == locationid)	return locations[i];
+	}
+	return null;
+};
