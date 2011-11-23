@@ -25,10 +25,12 @@ TW.UI.createBookDetailRow = function(params) {
 		width: 32
 	});
 	var row = Ti.UI.createTableViewRow({
-		height: '55'
+		height: '55',
+		data: data,
+		hasChild: true,
+		searchCriteria: data.title
 	});
-	row.data = data;
-	row.hasChild = true;
+	
 	row.add(poster)
 	row.add(bookTitle);
 	row.add(author);
