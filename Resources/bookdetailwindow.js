@@ -1,7 +1,8 @@
 TW.UI.createBookDetailWindow = function (params) {
 	var data = params.data;
 	var bookDetailWindow = Ti.UI.createWindow({
-		title: 'Book Detail'
+		title: 'Book Detail',
+		backgroundColor: '#fff'
 	});
 	
 	var poster = Ti.UI.createImageView({
@@ -63,7 +64,7 @@ TW.UI.createBookDetailWindow = function (params) {
 	var recommendationView = TW.UI.createRecommendationView({
  		
 	});
-	bookDetailWindow.backgroundColor = '#fff';
+	
 	bookDetailWindow.add(poster);
 	bookDetailWindow.add(title);
 	bookDetailWindow.add(author);

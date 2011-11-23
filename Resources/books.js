@@ -5,7 +5,8 @@ var searchBar = Titanium.UI.createSearchBar({
 
 
 var bookList = Titanium.UI.createTableView({
-	search: searchBar
+	search: searchBar,
+	filterAttribute: 'searchCriteria'
 });
 
 var loadBookList = function() {
@@ -14,7 +15,6 @@ var loadBookList = function() {
 		var row = TW.UI.createBookDetailRow({
 			data: books[i]
 		});
-		row.addEventListener('click', loadBookDetail);
 		bookList.appendRow(row);
 	}
 };
@@ -32,5 +32,5 @@ var booksWindow = Titanium.UI.createWindow({
     backgroundColor:'#fff'
 });
 
-
+bookList.addEventListener('click', loadBookDetail);
 booksWindow.add(bookList);
