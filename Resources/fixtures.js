@@ -32,8 +32,47 @@ TW.Fixtures.allLocations = [
 	{id: '5', name: 'Just Books Try', latitude: '12.838383', longitude: '77.737373'}
 ];
 
-TW.Fixtures.availabiltyDetails = [
- {locationId: 1, availableCopies: 1},
- {locationId: 2, availableCopies: 3},
- {locationId: 5, availableCopies: 7},
+TW.Fixtures.availabilityDetails = [{bookid: '1', availability:[
+		{locationId: 1, availableCopies: 1},
+		{locationId: 2, availableCopies: 3},
+		{locationId: 5, availableCopies: 7}]
+	},
+	{bookid: '2', availability:[
+		{locationId: 1, availableCopies: 1},
+		{locationId: 2, availableCopies: 2},
+		{locationId: 3, availableCopies: 1}
+	]},
+	{bookid: '3', availability:[
+		{locationId: 4, availableCopies: 1},
+		{locationId: 2, availableCopies: 3},
+		{locationId: 5, availableCopies: 7}]
+	},
+	{bookid: '4', availability:[
+		{locationId: 2, availableCopies: 3},
+		{locationId: 5, availableCopies: 7}]
+	},
+	{bookid: '5', availability:[
+		{locationId: 6, availableCopies: 11}
+	]},
+	{bookid: '6', availability:[
+		{locationId: 2, availableCopies: 10}
+	]},
+	{bookid: '7', availability:[
+		{locationId: 2, availableCopies: 1}
+	]},
+	{bookid: '8', availability:[
+		{locationId: 1, availableCopies: 1},
+		{locationId: 2, availableCopies: 3},
+		{locationId: 5, availableCopies: 7}
+	]},
+	{bookid: '9', availability:[
+		{locationId: 1, availableCopies: 1},
+		{locationId: 2, availableCopies: 3},
+		{locationId: 5, availableCopies: 7}
+	]},
+	{bookid: '10', availability:[
+		{locationId: 1, availableCopies: 1},
+		{locationId: 2, availableCopies: 1},
+		{locationId: 5, availableCopies: 1}
+	]}
 ];

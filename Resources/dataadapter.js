@@ -24,3 +24,14 @@ TW.DataAdapter.getAllLocationIds = function(){
 	}
 	return locationIds;
 }
+
+TW.DataAdapter.getAvailablityForBook = function(bookId) {
+	var availability = {};
+	var availabilityData = TW.Fixtures.availabilityDetails;
+	for(var i=0; i<availabilityData.length; i++) {
+		if(availabilityData[i].bookid === bookId) {
+			return availabilityData[i].availability;
+		}
+	}
+	return null;	
+}

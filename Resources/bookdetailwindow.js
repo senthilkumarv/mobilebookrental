@@ -80,9 +80,9 @@ TW.UI.createBookDetailWindow = function (params) {
 	});
 	
 	var showAvailability = function() {
-		var params ={};
-		params.data = TW.Fixtures.availabiltyDetails;
-		var mapView = TW.UI.createAnnotatedMapView(params);
+		var mapparams ={};
+		mapparams.data = TW.DataAdapter.getAvailablityForBook(data.bookId);
+		var mapView = TW.UI.createAnnotatedMapView(mapparams);
 		var mapWindow = Ti.UI.createWindow({
 			title: 'Locations'
 		});
