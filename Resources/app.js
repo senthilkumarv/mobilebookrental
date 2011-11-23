@@ -4,6 +4,8 @@ Ti.include('dataadapter.js')
 Ti.include('bookdetailrow.js')
 Ti.include('books.js')
 Ti.include('locate.js')
+Ti.include('recommendationview.js')
+Ti.include('bookdetailwindow.js')
 
 Titanium.UI.setBackgroundColor('#000');
 

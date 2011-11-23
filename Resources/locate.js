@@ -11,4 +11,12 @@ var locateWindow = Titanium.UI.createWindow({
     backgroundColor:'#fff'
 });
 
-locateWindow.add(label2);
+var mapview = Titanium.Map.createView({
+	mapType: Titanium.Map.STANDARD_TYPE,
+	region:{latitude:12.969393, longitude:77.5672999, latitudeDelta:0.5, longitudeDelta:0.5},
+	animate:true,
+	regionFit:true,
+	userLocation:true
+});
+
+locateWindow.add(mapview);

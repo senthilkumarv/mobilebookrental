@@ -1,11 +1,12 @@
-TW.UI.createBookDetailRow = function(data) {
+TW.UI.createBookDetailRow = function(params) {
+	var data = params.data; 
 	var bookTitle = Ti.UI.createLabel({
 		text: data.title,
 		textAlign: 'left',
 		top: 4,
   		left:35,
 		height: 20,
-		color:'#000'
+		color:'#000',
 	});
 	var author = Ti.UI.createLabel({
 		text: data.author,
@@ -26,6 +27,7 @@ TW.UI.createBookDetailRow = function(data) {
 	var row = Ti.UI.createTableViewRow({
 		height: '55'
 	});
+	row.data = data;
 	row.hasChild = true;
 	row.add(poster)
 	row.add(bookTitle);
