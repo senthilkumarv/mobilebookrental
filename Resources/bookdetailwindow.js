@@ -66,12 +66,7 @@ TW.UI.createBookDetailWindow = function (params) {
 		left: 10,
 		font: {fontSize: '14'}
 	});
-	var recommendationView = TW.UI.createRecommendationView({
-		data: TW.Store.Books.findRecommendedBooks(data.bookId),
-		top: 295,
-		height: 50
-	});
-	
+
 	var locateBookAvailability = Ti.UI.createButton({
 		title: 'View Availability',
 		top: 355,
@@ -104,8 +99,15 @@ TW.UI.createBookDetailWindow = function (params) {
 	bookDetailView.add(isbn);
 	bookDetailView.add(publisher);
 	bookDetailView.add(description);
-	bookDetailView.add(recommendationView);
-	
+	if(Ti.Platform.name != 'android') {
+		var recommendationView = TW.UI.createRecommendationView({
+		data: TW.Store.Books.findRecommendedBooks(data.bookId),
+		top: 295,
+		height: 50
+		});	
+		bookDetailView.add(recommendationView);
+	}
+		
 	var detailsScrollView = Ti.UI.createScrollView({
 		contentHeight:'auto',
 		top:0,
